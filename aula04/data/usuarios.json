@@ -1,0 +1,22 @@
+{
+  "usuarios":[
+    {
+      "nome":"Lucas",
+      "sobrenome":"Mello",
+      "email":"lcmelo@gmail.com",
+      "senha":"4230493"
+      },
+      {
+        "nome":"Marco",
+        "sobrenome":"Silva",
+        "email":"mcsuka@gmail.com",
+        "senha":"897\/*898+8"
+      },
+        {
+          "nome":"Mauro",
+          "sobrenome":"Horlando",
+          "email":"horlandom@gmail.com",
+          "senha":"asdf23904#33"
+    }
+  ]
+}
