@@ -1,3 +1,32 @@
+<?php
+    if(isset($_POST) && $_POST){
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        // obtendo conteudo do arquivo usuarios.json
+        $usuarios = file_get_contents('./data/usuarios.json');
+
+        // transformando o conteudo do arquivo usuarios.json em um array
+        $arrayUsuarios = json_decode($usuarios, true);
+
+        // Percorrendo o array que contem a lista de usuarios
+       foreach ($arrayUsuarios["usuarios"] as $usuario) {
+    
+           //validando se o email e a senha estão corretos
+           if ($email == $usuario["email"]){
+              if (password_verify ($senha, $usuario["senha"])){
+                echo "Sucesso!";
+              break;
+              }
+              else {
+                echo "Error!";
+                break;
+              }
+            }
+       }
+       die;
+    }
+?>
 <?php $tituloPagina = "Formluário de Login"; ?>
 <?php require_once("./inc/head.php"); ?>
 <?php require_once("./inc/header.php"); ?>
@@ -5,7 +34,7 @@
     <article class="row">
       <section class="col-12 mx-auto bg-light my-5 py-5 rounded border" id="cadastroForm">
         <h3 class="col-12 text-center my-3"><?= $tituloPagina ?></h3>
-          <form action="usuarios.php" method="post">
+          <form action="login.php" method="post">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="email">email</label>

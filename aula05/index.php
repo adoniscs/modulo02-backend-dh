@@ -10,7 +10,7 @@
     "nome" => $nome,
     "sobrenome" => $sobrenome,
     "email" => $email,
-    "senha" => $senha
+    "senha" => password_hash($senha, PASSWORD_DEFAULT)
   ];
 
   //obtendo conteudo do arquivo usuario.json
@@ -34,7 +34,7 @@
         <div class="form-group col-md-4 mt-3 fade show" role="alert">
         <?php
           if(isset($_POST) && $_POST) {
-            if(isset($caadastrou) && $cadastrou){
+            if(isset($cadastrou) && $cadastrou){
             echo '<div class="alert alert-success">Usuário cadastrado com sucesso</div>';
             }
             else {
@@ -59,7 +59,7 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="email">email</label>
+              <label for="email">Email</label>
               <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="form-group col-md-6">
