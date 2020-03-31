@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "nome": "Birosca",
+      "sobrenome": "Humana",
+      "email": "haha@gmail.com",
+      "senha": "$2y$10$4vDBnob2XjGMH9Bfbn13W.I96mwvNTE6BGdq4cHZMVwfpOVnk1GCC"
+    },
+    {
+      "nome": "ASdfj",
+      "sobrenome": "Asdfj",
+      "email": "asdfa@asdffds",
+      "senha": "$2y$10$KVpxCfrZUdBakLVQiSngWefupzTJ3OLKEoPbckRzGdnD.RYWMnNHq"
+    },
+    {
+      "nome": "asdfafs(",
+      "sobrenome": "asdfsdasa))",
+      "email": "asdf@asdf",
+      "senha": "$2y$10$HIbz9BL.ghXne2bYhu6W8OfivUbnNIUKCmumPAEDEtyBXo9wdAxyG"
+    },
+    {
+      "nome": "ASDf",
+      "sobrenome": "ASDf",
+      "email": "a@a",
+      "senha": "$2y$10$nR3ljk22ujVp9cx3kxKKe.BJcMPauo6aoCWV5oOVZHWIZ\/bBgPkOO"
+    },
+    {
+      "nome": "testando",
+      "sobrenome": "sou teste",
+      "email": "testando123@gmail.com",
+      "senha": "$2y$10$vu6VHYXEEurgjSHczQQaDOOdF8LbEtTYUw\/eX\/ksquTDvIw\/zdEfy"
+    }
+  ]
+}
