@@ -45,7 +45,7 @@
                 <input type="password" class="form-control" id="senha" name="senha" required>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary float-right" id="btnCadastrar">Entrar</button>
+            <button type="submit" class="btn btn-primary float-right" id="btnCadastrar">Entrar </button>
           </form>
       </section>
     </article>
