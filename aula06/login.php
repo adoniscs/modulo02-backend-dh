@@ -1,33 +1,43 @@
 <?php
+
     if(isset($_POST) && $_POST){
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
+      $email = $_POST['email'];
+      $senha = $_POST['senha'];
 
-        // obtendo conteudo do arquivo usuarios.json
-        $usuarios = file_get_contents('./data/usuarios.json');
+      $logado = false;
 
-        // transformando o conteudo do arquivo usuarios.json em um array
-        $arrayUsuarios = json_decode($usuarios, true);
+      // obtendo conteudo do arquivo usuarios.json
+      $usuarios = file_get_contents('./data/usuarios.json');
 
-        // Percorrendo o array que contem a lista de usuarios
-       foreach ($arrayUsuarios["usuarios"] as $usuario) {
-    
-           //validando se o email e a senha estão corretos
-           if ($email == $usuario["email"]){
-              if (password_verify ($senha, $usuario["senha"])){
-                echo "Sucesso!";
-              break;
-              }
-              else {
-                echo "Error!";
-                break;
-              }
-            }
-       }
-       die;
+      // transformando o conteudo do arquivo usuarios.json em um array
+      $arrayUsuarios = json_decode($usuarios, true);
+
+      // Percorrendo o array que contem a lista de usuarios
+      foreach ($arrayUsuarios["usuarios"] as $usuario) {
+
+        //validando se o email e a senha estão corretos
+        if ($email == $usuario["email"]){
+          if (password_verify ($senha, $usuario["senha"])){
+
+            $logado = true;
+
+            // iniciando sessao caso o usuario tenha informado usuario e senha corretamente 
+
+            session_start();
+
+            $_SESSION['id']   = $usuario['id'];
+            $_SESSION['nome'] = $nome['nome'];
+            
+            // redirecionar para a lista de usuario (mesmo conceito do href)
+            header("Location: usuarios.php");
+          }
+          
+        }
+      }
+      
     }
 ?>
-<?php $tituloPagina = "Formluário de Login"; ?>
+<?php $tituloPagina = "Formulário de Login"; ?>
 <?php require_once("./inc/head.php"); ?>
 <?php require_once("./inc/header.php"); ?>
   <main class="container">
@@ -45,7 +55,19 @@
                 <input type="password" class="form-control" id="senha" name="senha" required>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary float-right" id="btnCadastrar">Entrar</button>
+            <button type="submit" class="btn btn-primary" id="btnCadastrar">Entrar</button>
+            <!-- mensagem  -->
+            <div class="form-group" role="alert">
+              <?php
+                if(isset($_POST) && $_POST) {
+                  if(!$logado){
+                    echo '<div class="alert alert-danger my-4">Usuário ou senha inválidos.</div>';
+                  }
+                }
+              ?>
+            </div>
+          <!--// mensagem  -->
+
           </form>
       </section>
     </article>

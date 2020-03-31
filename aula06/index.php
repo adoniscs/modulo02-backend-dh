@@ -31,18 +31,22 @@
 <?php require_once("./inc/head.php"); ?>
 <?php require_once("./inc/header.php"); ?>
   <main class="container">
-        <div class="form-group col-md-4 mt-3 fade show" role="alert">
-        <?php
-          if(isset($_POST) && $_POST) {
-            if(isset($cadastrou) && $cadastrou){
-            echo '<div class="alert alert-success">Usuário cadastrado com sucesso</div>';
+
+    <!--// mensagem  -->
+        <div class="form-group mt-3 fade show" role="alert">
+          <?php
+            if(isset($_POST) && $_POST) {
+              if(isset($cadastrou) && $cadastrou){
+              echo '<div class="alert alert-success">Usuário cadastrado com sucesso</div>';
+              }
+              else {
+              echo '<div class="alert alert-danger">Falha ao processar requisiçãos</div>';
+              }
             }
-            else {
-            echo '<div class="alert alert-danger">Falha ao processar requisiçãos</div>';
-            }
-          }
-        ?>
+          ?>
         </div>
+      <!-- mensagem  -->
+      
     <article class="row">
       <section class="col-12 mx-auto bg-light my-5 py-5 rounded border" id="cadastroForm">
         <h3 class="col-12 text-center my-3"><?= $tituloPagina ?></h3>
@@ -75,7 +79,7 @@
               </label>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary float-right" id="btnCadastrar">Cadastrar</button>
+          <button type="submit" class="btn btn-primary" id="btnCadastrar">Cadastrar</button>
         </form>
       </section>
     </article>

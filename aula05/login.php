@@ -24,10 +24,10 @@
               }
             }
        }
-       die;
+
     }
 ?>
-<?php $tituloPagina = "Formluário de Login"; ?>
+<?php $tituloPagina = "Formulário de Login"; ?>
 <?php require_once("./inc/head.php"); ?>
 <?php require_once("./inc/header.php"); ?>
   <main class="container">
@@ -45,7 +45,7 @@
                 <input type="password" class="form-control" id="senha" name="senha" required>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary float-right" id="btnCadastrar">Entrar</button>
+            <button type="submit" class="btn btn-primary float-right" id="btnCadastrar">Login</button>
           </form>
       </section>
     </article>
