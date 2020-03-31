@@ -46,6 +46,8 @@
               </div>
             </div>
             <button type="submit" class="btn btn-primary float-right" id="btnCadastrar">Login</button>
+
+            <button type="submit" class="btn btn-primary float-right" id="btnCadastrar">Entrar </button>
           </form>
       </section>
     </article>
