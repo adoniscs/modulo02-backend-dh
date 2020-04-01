@@ -1,18 +1,11 @@
 {
-  "usuarios": [
-    {
-      "id": 1,
-      "nome": "Birosca",
-      "sobrenome": "Humana",
-      "email": "haha@gmail.com",
-      "senha": "$2y$10$4vDBnob2XjGMH9Bfbn13W.I96mwvNTE6BGdq4cHZMVwfpOVnk1GCC"
-    },
-    {
-      "id": 2,
-      "nome": "a",
-      "sobrenome": "b",
-      "email": "a@b",
-      "senha": "$2y$10$IwV1tlRFp5sHf2Q6cp2z0e\/CV3S8gmP1cR\/EoYqA4YATucn.EBJBm"
+    "usuarios": {
+        "0": {
+            "id": 1,
+            "nome": "Victor",
+            "sobrenome": "Torres",
+            "email": "vtorres@digitalhouse.com",
+            "senha": "$2y$10$vpssTpNfx8LBe9XNWd\/yne2vVhkSwDUc\/o.kdjnrRqvoR1TczYjH."
+        }
     }
-  ]
 }
