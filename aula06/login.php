@@ -52,7 +52,7 @@
                             <input type="password" class="form-control" id="senha" name="senha" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="btnCadastrar">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary" id="btnCadastrar">Entrar</button>
                     <div class="form-group">
                         <?php
                             if(isset($_POST) && $_POST){
